@@ -192,7 +192,15 @@ public class Main {
 //			System.out.println(product.getPrice() + " :" + product.getName());
 //
 //		}
-		
+		// -------------------findTop3ByPrice()-----------------------------------------
+		// -------------------findByPriceGreaterThan()-----------------------------------------
+ 		List<Product> list = proRepo.findTop3ByPriceGreaterThan(0);
+ 
+ 		for (Product product : list) {
+ 
+ 			System.out.println(product.getPrice() + " :" + product.getName());
+ 
+ 		}
 		
 		
 		
@@ -244,6 +252,38 @@ public class Main {
 		
 		
 		
+		
+	}
+
+	public void joins() {
+	
+//		List<Product> list=proRepo.findByOwnerName("Kebede");
+//		
+//		for (Product product : list) {
+//			System.out.println(product.getName() +" : "+ product.getOwner().getName());
+//		}
+		
+//		-------------------------substitution for join --------eventhough the required is product
+		//-----------------------------------------------------owner will be also fetched automatically
+//		List<Product> list=proRepo.getAllProductsWithOwner();
+//		
+//		for (Product product : list) {
+//			System.out.println(product.getName() +" : "+ product.getOwner().getName());
+//		}
+		
+		
+		
+	}
+
+	public void projection() {
+		
+//		List<ProductNameAndDescription> list=proRepo.findProductNamesAndDescriptions();
+//		list.forEach(n->System.out.println(n.getName()+" : "+n.getDescription()+" : "+n.getPrice()));
+//		
+		
+		
+		List<Product> list=proRepo.findProductsByNameAndIdAndActive("Product_10","2",true);
+		list.forEach(n->System.out.println(n.getName()+" : "+n.getDescription()+" : "+n.getPrice()));
 		
 	}
 

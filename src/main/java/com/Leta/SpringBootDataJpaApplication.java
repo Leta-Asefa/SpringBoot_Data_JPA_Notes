@@ -24,8 +24,12 @@ public class SpringBootDataJpaApplication  {
 		//main.customSearching_One();
 		//main.customSearching_Two();
 		//main.oneToMany();
+		//main.joins();
+		//main.projection();   
 		
+	
 		
+		 
 		
 		
 		

@@ -49,7 +49,9 @@ public class Product {
 	private LocalDateTime lastUpdated;
 	@Autowired
 	@ManyToOne
-	private Owner owner;
+	private Owner owner; 
+	 
+	
 	
 	
 }
